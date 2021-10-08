@@ -2,35 +2,46 @@
 
 $artikel = array(
     (object) array(
-        "judul" => "Card title 1",
-        "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula lacus, fermentum a tristique vitae, malesuada et purus. Morbi tincidunt elementum hendrerit.",
-        "gambar" => "image/easy-food.jpg"
+        "judul" => "Jika Kondisi Lingkungan Tak Berubah, Kopi Bisa Punah?",
+        "text" => "KOPI memang mungkin telah menjadi salah satu sajian yang paling digemari banyak orang. Tidak heran jika kemudian banyak warung kopi menjamur di Indonesia dengan berbagai konsep.",
+        "gambar" => "image/kopi.jpeg"
     ),
     (object) array(
-        "judul" => "Card title 2",
-        "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula lacus, fermentum a tristique vitae, malesuada et purus. Morbi tincidunt elementum hendrerit.",
-        "gambar" => "image/vegetables.png"
+        "judul" => "10 Mie Instan Terenak di Dunia Versi NY Magazine, Ada 2 Produk Indonesia!",
+        "text" => "TERNYATA kegiatan menyusuri market untuk mencari mie instan bukan hanya dinikmati oleh kaum tanggal tua saja. Mie instan memiliki daya tariknya tersendiri.",
+        "gambar" => "image/mie.jpg"
     ),
     (object) array(
-        "judul" => "Card title 3",
-        "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula lacus, fermentum a tristique vitae, malesuada et purus. Morbi tincidunt elementum hendrerit.",
-        "gambar" => "image/feast.jpg"
+        "judul" => "PON XX Jadi Kesempatan Promosikan Sagu Papua",
+        "text" => "SAGU menjadi makanan pokok orang Papua. Jika biasanya hanya diolah menjadi papeda, ternyata sagu bisa diolah menjadi mi maupun pasta. Jenny Wijaja, memperkenalkan varian mi dan pasta yang terbuat dari 100 persen sagu.",
+        "gambar" => "image/sagu.jpg"
     ),
     (object) array(
-        "judul" => "Card title 4",
-        "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula lacus, fermentum a tristique vitae, malesuada et purus. Morbi tincidunt elementum hendrerit.",
-        "gambar" => "image/easy-food.jpg"
+        "judul" => "Pengusaha Kuliner Tak Boleh Puas dengan Produk Saat Ini
+        ",
+        "text" => "MEMBANGUN bisnis kuliner di masa pandemi ini justru menjadi peluang. Diiringi dengan tren kuliner di media sosial yang semakin marak.Ekspansi industri kuliner di masa pandemi ini maju pesat. Bahkan di bidang kuliner maupun jasa boga selama ini menyerap banyak sumber daya manusia.",
+        "gambar" => "image/usaha-kuliner.jpg"
+    ),
+    (object) array(
+        "judul" => "Aturan Jam Makan Ideal agar Jantung Sehat, Coba Yuk!",
+        "text" => "SELAMA ini mencegah penyakit jantung bukan hanya memastikan disiplin berolahraga dan tidak merokok. Menurut Dokter Spesialis Jantung dan Pembuluh Darah Primaya Hospital dr Fachmi Ahmad M. SpJP, demi menjaga jantung sehat, konsumsi makanan sebanyak tiga kali sehari harus diperhatikan.",
+        "gambar" => "image/makan-sehat.jpg"
+    ),
+    (object) array(
+        "judul" => "Tren Saus Aneka Rasa Bikin Makan Burger Gak Hambar",
+        "text" => "MAKAN burger tanpa saus rasanya pasti hambar. Banyak pilihan saus favorit yang menjadi tambahan rasa disukai orang Indonesia. Mulai dari saus tomat bercita rasa asam manis, saus sambal mangga dengan sensasi rasa pedas, hingga saus sambal dengan tambahan bumbu jalapeno ala Italia.",
+        "gambar" => "image/burger.jpg"
     ),
 );
 $carousel = array(
     (object) array(
+        "gambar" => "image/vegetables.png"
+    ),
+    (object) array(
         "gambar" => "image/easy-food.jpg"
     ),
     (object) array(
         "gambar" => "image/vegetables.png"
-    ),
-    (object) array(
-        "gambar" => "image/feast.jpg"
     ),
 );
 ?>
@@ -77,13 +88,13 @@ $carousel = array(
             <div class="row">
               <div class="col col-12 pt-5 pb-4">
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner" id="carousel">
+                  <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="image/junkfood.jpg" alt="First slide">
+                      <img class="img-fluid d-block w-100 carousel-img" src="image/junkfood.jpg" alt="First slide">
                     </div>
                     <?php foreach ($carousel as $car) { ?>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="<?=$car->gambar ?>" alt="Second slide">
+                      <img class="img-fluid d-block w-100 carousel-img" src="<?=$car->gambar ?>" alt="Second slide">
                     </div>
                     <?php } ?>
                   </div>
@@ -116,7 +127,7 @@ $carousel = array(
                 </div>
                 <?php foreach ($artikel as $data) { ?>
                 <div class="col col-4 py-4">
-                    <div class="card mb-3">
+                    <div class="card mb-3 kartu">
                         <img src="<?=$data->gambar ?>" alt="" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center"><?=$data->judul ?></h5>
